@@ -1,0 +1,119 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string",
+        "description": "Cleaned address"
+      },
+      "result": {
+        "type": "string",
+        "description": "ok, risky or invalid"
+      },
+      "score": {
+        "type": "integer",
+        "description": "0-100 quality score"
+      },
+      "reasons": {
+        "type": "array",
+        "description": "Why the score was lowered, e.g. disposable_domain, role_address, possible_typo:gmail.com",
+        "items": {
+          "type": "string"
+        }
+      },
+      "local": {
+        "type": "string",
+        "description": "Part before @"
+      },
+      "domain": {
+        "type": "string",
+        "description": "Domain (punycode)"
+      },
+      "isDisposable": {
+        "type": "boolean",
+        "description": "Known disposable/temporary domain"
+      },
+      "isRole": {
+        "type": "boolean",
+        "description": "Role address such as info@ or admin@"
+      },
+      "isFreeProvider": {
+        "type": "boolean",
+        "description": "Free mailbox provider such as Gmail"
+      },
+      "didYouMean": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Suggested corrected address"
+      },
+      "mxHosts": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "description": "Mail servers by priority (null when DNS check is off)",
+        "items": {
+          "type": "string"
+        }
+      },
+      "mailProvider": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Mail provider inferred from MX hosts"
+      }
+    },
+    "additionalProperties": true
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "email",
+          "result",
+          "score",
+          "reasons",
+          "didYouMean",
+          "mailProvider",
+          "isDisposable",
+          "isRole"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "email": {
+            "label": "Email"
+          },
+          "result": {
+            "label": "Result"
+          },
+          "score": {
+            "label": "Score"
+          },
+          "reasons": {
+            "label": "Reasons"
+          },
+          "didYouMean": {
+            "label": "Did you mean"
+          },
+          "mailProvider": {
+            "label": "Provider"
+          },
+          "isDisposable": {
+            "label": "Disposable"
+          },
+          "isRole": {
+            "label": "Role"
+          }
+        }
+      }
+    }
+  }
+}

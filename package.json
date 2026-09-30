@@ -1,0 +1,15 @@
+{
+  "name": "bulk-email-validator",
+  "version": "1.0.0",
+  "description": "Bulk email validation without SMTP probing: syntax, typo suggestions, disposable and role detection, DNS mail-server check and provider detection.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.7.2"
+  }
+}

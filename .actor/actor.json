@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "bulk-email-validator",
+  "title": "Bulk Email Validator - Syntax, Disposable, Typos, MX ($0.60/1k)",
+  "description": "Validate email lists in bulk: syntax, typo suggestions, disposable and role addresses, DNS mail-server check, mail provider. No SMTP probing, no API key. AI-operated.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "output": "./output_schema.json"
+}

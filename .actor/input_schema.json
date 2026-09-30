@@ -1,0 +1,39 @@
+{
+  "title": "Bulk Email Validator",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "emails": {
+      "title": "Emails",
+      "type": "array",
+      "description": "Email addresses to check. Forms like \"Jane <jane@acme.io>\" and \"mailto:\" links are cleaned up. Duplicates are skipped.",
+      "editor": "stringList",
+      "prefill": [
+        "anna@gmail.com",
+        "info@apify.com",
+        "test@mailinator.com",
+        "bob@gmial.com"
+      ]
+    },
+    "emailsText": {
+      "title": "Emails as text",
+      "type": "string",
+      "description": "Optional. Paste a whole column or CSV text; addresses can be separated by new lines, commas, semicolons or spaces.",
+      "editor": "textarea"
+    },
+    "checkDns": {
+      "title": "Check mail servers (DNS)",
+      "type": "boolean",
+      "description": "Look up MX records for every domain (cached per domain). Turn off for a syntax, disposable and typo check only.",
+      "default": true
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Parallel checks, 1-100.",
+      "minimum": 1,
+      "maximum": 100,
+      "default": 25
+    }
+  }
+}
