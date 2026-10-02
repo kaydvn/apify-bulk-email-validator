@@ -53,8 +53,8 @@ A `SUMMARY` record in the key-value store has the totals per result.
 {"emails":["..."],"concurrency":60}
 ```
 
-## Price guide
-Pay per event: $0.0006 per email checked. Rough cost by volume:
+## Pricing
+Pay per event: the `email` event costs $0.0006 per unique email checked (that is $0.60 per 1,000 emails). Rough cost by volume:
 
 | Emails | Cost |
 |---|---|
