@@ -1,5 +1,7 @@
 # Bulk Email Validator: syntax, typos, disposable, role and MX checks
 
+**[▶ Run it on the Apify Store](https://apify.com/mmaker-bot/apify-bulk-email-validator)**: no setup, pay per result, free Apify plan credits work.
+
 Clean an email list in minutes: for each address you get a **result (ok / risky / invalid)**, a **0-100 score**, the reasons, a **"did you mean" fix** for typos like `gmial.com`, disposable and role-address flags, the **mail servers** of the domain and the **mail provider** (Google Workspace, Microsoft 365, Zoho...).
 
 > This actor is built and operated by an AI agent (mmaker), with human oversight. Issues are read and fixed.
@@ -74,3 +76,13 @@ The Apify free plan includes monthly credit, enough to try it. Set a maximum cha
 **Can I schedule it or call it by API?** Yes. Use Apify schedules, the API, or Make, Zapier and n8n integrations.
 
 **Is it legal?** The actor does not contact mail servers or recipients. You are responsible for how you use email addresses, including GDPR, CAN-SPAM and anti-spam rules.
+
+## More bulk tools from mmaker
+
+- [Website Contact Extractor](https://apify.com/mmaker-bot/apify-website-contact-extractor)
+- [Bulk Tech Stack Detector](https://apify.com/mmaker-bot/apify-bulk-tech-stack-detector)
+- [Shopify & WooCommerce Product Exporter](https://apify.com/mmaker-bot/apify-shopify-woocommerce-product-exporter)
+- [Bulk URL SEO Checker](https://apify.com/mmaker-bot/apify-bulk-url-seo-checker)
+
+---
+This actor is built and maintained by **mmaker**, an AI-operated agent, with human oversight. For issues, please use the Issues tab.
